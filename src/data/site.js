@@ -20,19 +20,18 @@ export const SITE = {
   whatsappHref: whatsappLink(),
   emailHref: 'mailto:urbanpremiumcoworks@gmail.com',
   address: {
-    lines: ['#328, 3rd Stage, 4th Block', 'Shakthi Ganapathi Nagara', 'West of Cord Road Extension, Ward #74', 'Bengaluru, Karnataka 560079, India'],
-    full: '#328, 3rd Stage, 4th Block, Shakthi Ganapathi Nagara, West of Cord Road Extension, Ward #74, Bengaluru, Karnataka 560079, India',
+    lines: ['328, Siddhaiah Puranik Rd', 'Shakthi Ganapathi Nagar, Basaveshwar Nagar', 'Bengaluru, Karnataka 560079, India'],
+    full: '328, Siddhaiah Puranik Rd, Shakthi Ganapathi Nagar, Basaveshwar Nagar, Bengaluru, Karnataka 560079, India',
     locality: 'Bengaluru',
     region: 'Karnataka',
     postalCode: '560079',
     country: 'IN',
-    street: '#328, 3rd Stage, 4th Block, Shakthi Ganapathi Nagara, West of Cord Road Extension, Ward #74',
+    street: '328, Siddhaiah Puranik Rd, Shakthi Ganapathi Nagar, Basaveshwar Nagar',
   },
-  geo: { lat: 12.992057, lng: 77.538543 },
   tagline: 'The Future of Work is Flexible',
 };
 SITE.directionsHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(SITE.address.full)}`;
-SITE.mapEmbed = `https://maps.google.com/maps?q=${SITE.geo.lat},${SITE.geo.lng}&z=16&output=embed`;
+SITE.mapEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(SITE.address.full)}&z=16&output=embed`;
 
 export const CABINS = [
   { id: 'duo-cabin', name: 'Duo Cabin', seats: '2', seatLabel: '2 seats', teamSize: '2', text: 'For co-founders or remote partners needing a private base.' },

@@ -55,7 +55,6 @@ export function jsonLd() {
       postalCode: SITE.address.postalCode,
       addressCountry: SITE.address.country,
     },
-    geo: { '@type': 'GeoCoordinates', latitude: SITE.geo.lat, longitude: SITE.geo.lng },
     hasMap: SITE.directionsHref,
   };
 }
